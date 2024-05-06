@@ -32,7 +32,7 @@ Solo a questo punto sarà utile passare alla lettura della lista da un file JSON
 
         <div class="container">
             <div class="row">
-                <div v-for="disc in discs" class="col">
+                <div v-for="disc in discs" class="col py-3">
                     <div class="card" style="width: 18rem;">
                         <img :src="disc.poster" class="card-img-top" :alt="disc.title">
                         <ul class="list-group list-group-flush text-center">
