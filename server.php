@@ -7,11 +7,13 @@ tramite la funzione json_decode()  */
 $discs = json_decode($discs_json, true);
 
 
-/* indica che il contenuto inviato al client e' in formato json */
+/* indica che il contenuto inviato al client e' in formato json.
+ necessario per far leggere correttamente i dati a JavaScript*/
 header('Content-Type: application/json');
 
 /* prende struttura dati php e trasforma in json.
- Il contenuto di discs-list.json verra' mandato indietro al client come json*/
+ Il contenuto di discs-list.json verra' mandato indietro al client come json 
+ (necessario per )*/
 
 echo json_encode($discs);
 
