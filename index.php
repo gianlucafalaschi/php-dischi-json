@@ -14,29 +14,18 @@
 </head>
 <body>
     <div id="app">
-        <h1>{{test}}</h1>
+        
 
         <div class="container">
             <div class="row">
-                <div class="col">
+                <div v-for="disc in discs" class="col">
                     <div class="card" style="width: 18rem;">
-                        <img src="https://images-na.ssl-images-amazon.com/images/I/51sBr4IWDwL.jpg" class="card-img-top" alt="...">
+                        <img :src="disc.poster" class="card-img-top" :alt="disc.title">
                         <ul class="list-group list-group-flush text-center">
-                            <li class="list-group-item">Title</li>
-                            <li class="list-group-item">Author</li>
-                            <li class="list-group-item">Year</li>
-                            <li class="list-group-item">Genre</li>
-                        </ul>
-                    </div>
-                </div>
-                <div class="col">
-                    <div class="card" style="width: 18rem;">
-                        <img src="https://images-na.ssl-images-amazon.com/images/I/51sBr4IWDwL.jpg" class="card-img-top" alt="...">
-                        <ul class="list-group list-group-flush text-center">
-                            <li class="list-group-item">Title</li>
-                            <li class="list-group-item">Author</li>
-                            <li class="list-group-item">Year</li>
-                            <li class="list-group-item">Genre</li>
+                            <li class="list-group-item">{{disc.title}}</li>
+                            <li class="list-group-item">{{disc.author}}</li>
+                            <li class="list-group-item">{{disc.year}}</li>
+                            <li class="list-group-item">{{disc.genre}}</li>
                         </ul>
                     </div>
                 </div>
